@@ -287,7 +287,7 @@ func (l *lexer) run() {
 				continue // next token
 			}
 
-			if strings.HasPrefix(l.input[l.pos:], "{{") || // variable
+			if strings.HasPrefix(l.input[l.pos:], "${{") || // variable
 				strings.HasPrefix(l.input[l.pos:], "{%") { // tag
 				if l.pos > l.start {
 					l.emit(TokenHTML)
