@@ -479,7 +479,7 @@ func (p *Parser) parseRelationalExpression() (IEvaluator, *Error) {
 		expr1: expr1,
 	}
 
-	if t := p.MatchOne(TokenSymbol, "==", "<=", ">=", "!=", "<>", ">", "<"); t != nil {
+	if t := p.MatchOne(TokenSymbol, "==", "===", "<=", ">=", "!=", "<>", ">", "<"); t != nil {
 		expr2, err := p.parseRelationalExpression()
 		if err != nil {
 			return nil, err
