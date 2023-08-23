@@ -196,6 +196,8 @@ func (expr *relationalExpression) Evaluate(ctx *ExecutionContext) (*Value, *Erro
 			return AsValue(v1.Integer() >= v2.Integer()), nil
 		case "==":
 			return AsValue(v1.EqualValueTo(v2)), nil
+		case "===":
+			return AsValue(v1.EqualValueTo(v2)), nil
 		case ">":
 			if v1.IsFloat() || v2.IsFloat() {
 				return AsValue(v1.Float() > v2.Float()), nil
