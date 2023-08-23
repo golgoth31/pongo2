@@ -30,7 +30,7 @@ var (
 	// Available symbols in pongo2 (within filters/tag)
 	TokenSymbols = []string{
 		// 3-Char symbols
-		"{{-", "-}}", "{%-", "-%}",
+		"${{", "{{-", "-}}", "{%-", "-%}",
 
 		// 2-Char symbols
 		"==", ">=", "<=", "&&", "||", "{{", "}}", "{%", "%}", "!=", "<>",

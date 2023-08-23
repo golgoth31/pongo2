@@ -22,6 +22,13 @@ func (p *Parser) parseDocElement() (INode, *Error) {
 				return nil, err
 			}
 			return variable, nil
+		case "${{":
+			// parse variable
+			variable, err := p.parseVariableElement()
+			if err != nil {
+				return nil, err
+			}
+			return variable, nil
 		case "{%":
 			// parse tag
 			tag, err := p.parseTagElement()
