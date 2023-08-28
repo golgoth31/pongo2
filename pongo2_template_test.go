@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/flosch/pongo2/v6"
+	"github.com/golgoth31/pongo2/v6"
 )
 
 type stringerValueType int
